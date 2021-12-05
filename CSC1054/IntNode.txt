@@ -1,0 +1,134 @@
+private IntNode head = null;
+   
+   public void print()
+   {
+      System.out.println("print!");
+      IntNode current = head;
+      
+      while(current != null)
+      {
+         System.out.println(current.getData());
+         current = current.getNext();
+      }
+   }
+   
+   public int getSize()
+   {
+      int size=0;
+      IntNode current = head;
+      
+      while(current != null)
+      {
+         size++;
+         current = current.getNext();
+      }
+      
+      return size;
+   }
+   
+   public void printReverse()
+   {
+      System.out.println("print reverse!");
+      
+      //what is the size of our linked list?
+      int N = getSize();
+      
+      //can we do ^ N times, starting with the last node?
+      for(int i=N-1;i>=0;i--)
+      {
+         printSingleNode(i);
+      }
+      
+      //can we print out a particular node? Nth node.
+   }
+   
+   public void printSingleNode(int index)
+   {
+      int currentIndex=0;      
+      IntNode current = head;      
+      
+      while(current != null)      
+      {         
+         //what index are we at?         
+         if(index == currentIndex)         
+         {
+            System.out.println(current.getData());
+            return;
+         }              
+         
+         currentIndex++;         
+         current = current.getNext();      
+      }   
+   }   
+   
+   public void insertFront(int value)   
+   {      
+      //create a new node      
+      IntNode newNode = new IntNode(value);      
+      
+      //set new node's next to point to the previous head      
+      newNode.setNext(head);      
+      
+      //set the head to be the next node      
+      head = newNode;   
+   }   
+   
+   //index is a valid index.   
+   public void insertAtIndex(int value, int index)   
+   {      
+      //special case - required to make it work at a particular position      
+      if(index == 0)      
+      {         
+         insertFront(value);      
+      }      
+      else      
+      {         
+         //general case - works at almost every position         
+         //find the node preceeding the node we want to add in         
+         IntNode prev = head;         
+         
+         for(int i=0;i<index-1;i++)         
+         {            
+            prev = prev.getNext();         
+         }         
+         
+         //create a new node         
+         IntNode theNewNode = new IntNode(value);         
+         
+         //set the new node to point to the preceeding node's next         
+         theNewNode.setNext(prev.getNext());         
+         
+         //make the preceeding node point to the new node         
+         prev.setNext(theNewNode);      
+      }   
+   }   
+   
+   public void deleteAtFront()   
+   {      
+      head = head.getNext();   
+   }   
+   
+   public void deleteAtIndex(int index)
+   {      
+      //general case      
+      //  find the index we care about (same as insert)      
+      //  set the prev node to point to the prev next's next      
+      //special case      
+      //  at the front: why? because you have to modify "head"      
+      //  call deleteAtFront      
+      if(index == 0)
+      {
+         deleteAtFront();      
+      }
+      else      
+      {         
+         IntNode prev = head;         
+         
+         for(int i=0;i<index-1;i++)         
+         {            
+            prev = prev.getNext();         
+         }         
+         
+         prev.setNext(prev.getNext().getNext());      
+      }   
+   }

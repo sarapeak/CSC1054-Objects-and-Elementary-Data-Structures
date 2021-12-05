@@ -1,0 +1,11 @@
+1. (5 points)  How are abstract classes used in this lab?
+Abstract classes are used as super classes to the sub classes. In other words, the Bird class is the parent class to the HummingBird calss and the Penguin class, otherwise known as the children.
+
+2. (5 points)  Why do we sometimes not want to use protected?
+Sometimes we do not want to use protected when we do not want a variable changed at all or reset everytime.
+
+3. (5 points)  Summarize what inheritance does.
+Inheritance allows use to reuse code instead of rewriting it. If the parent class is modified, the child classes will also be modified without having to change anything.
+
+4. (5 points)  What happens if we don’t override all abstract methods in an abstract class?
+If we don't override all abstract methods in an abstract class, the code will error out.

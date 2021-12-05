@@ -1,0 +1,19 @@
+1. (4 points) Why would you want to use an array list over an array when you have to add and remove things from the middle of the list?
+An ArrayList allows you to have a list without parameters allowing the user or coder to input as many indexes as they desire until they end it themselves. An ArrayList gives more freedom over an array.
+
+2. (4 points) List three ArrayList methods, which were not listed in the book. To do this, look up the array list class online.
+ensureCapacity(int minCapacity)
+listIterator()
+retainAll(Collection<?> c)
+
+3. (2 point) Why would a do-while loop be preferable to a while loop in Part III of this lab?
+A do while loop would be preferable because it will loop though the code one time even if what the user inputted is wrong. A do while loop will test the condition entered at the end of it. A while loop would test the condition in the beginning. 
+
+4. (5 points) Consider part I of this lab, what would the problem have been with having temperature public (instead of private) and setting the value of temperature in main?
+It is a good rule of thumb to have all member variables set to private. This ensures that these member variables can only be changed in the class when using a mutator. Having it set to public would not allow the member variable to be contained in the class.
+
+5. (2.5 points) We don’t want to reinvent the wheel (have the same code twice). What does that mean for Part I, given that the constructor that takes in a temperature and the mutator, setTempInF, also takes in a temperature?
+This means that you don't want to copy the same code you used. If you already have the code, it is a waste of space to make it again in a different section. It would be more simplistic to return the method that has the mutator for any method that takes in a temperature.
+
+6. (2.5 points) Why does, after Set (2) = (1).i.e., gauge2 = gauge1;, the print out (1) change when you changed (2) and not (1)?
+Because (2) is now looking at the (1) object and identifies that its memory is in (1), therefore, the change needs to be made in (1) instead of (2).

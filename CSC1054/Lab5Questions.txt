@@ -1,0 +1,5 @@
+1. (5 points)  What does a GridPane do? What does a BorderPane do?
+A GridPane lays out each compnent in a grid. The coder can indicate the where a component is to go and the components do not have to be of equal size. A BorderPane creates 5 different areas in which the coder can add things to. The areas can resize depending on the size of the pane and components. 
+
+2. (5 points) What happens if you don’t extend a Pane (for example FlowPane) and try to add it to the “root”? Why does this happen?
+I recieve an error that states that they are incompatible types. By not extending the pane, the thing that is trying to be added to the root is not a javafx object which means it cannot be added to root.

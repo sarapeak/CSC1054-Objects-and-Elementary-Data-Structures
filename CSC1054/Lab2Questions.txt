@@ -1,0 +1,11 @@
+1. (5 points)  Why not use == to compare objects?
+== compares object references, not the object themselves.
+
+2. (5 points) How do you make .equals work to compare objects?
+You make a .equals work by creating an instance of the object of the variable to compare each parameter in the object.
+
+3. (5 points) why does it not make sense for a static method to be able to use an instance class variable?
+Static methods are associated with the class and not with any object. Static methods can be used called even when objects have not been instantiated.
+
+4. (5 points) how is a static variable different from a non-static variable?
+A static variable is shared among all instances of a class while non-static variables are specific to that instance of a class
