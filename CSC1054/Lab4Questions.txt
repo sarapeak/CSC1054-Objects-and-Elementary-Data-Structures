@@ -1,5 +1,0 @@
-1. (5 points)  Why do we not want to simply catch everything by always catching “Exception” (instead of, for instance, NumberFormatException)?
-We do not want to simply catch everything by only using exception because that would limit what the user is able to input. By catching the errors individually we are able to tell the user what the error is and how to fix it. We want to the user to input everything first and then see if there is an error.
-
-2. (5 points) What happens if you try to read beyond the length of a file? Give it a try to get the answer!
-If you try to read beyond the length of a file, it errors out and gives an out of bounds exception.
